@@ -128,7 +128,20 @@ const Dashboard = () => {
     </div>
   </div>
 </div>
-
+      <div className="project-overview">
+        <div className="projects-table">
+          <div className='projects-details'>
+            <div className="details-child-1">
+              <div className='details-child-01'>Projects</div>
+              <div className='details-child-02'>30 done this month</div>
+            </div>
+            <div className="details-child-2"></div>
+          </div>
+        </div>
+        <div className="overview">
+          hello
+        </div>
+      </div>
       </div>
     </div>
   )

@@ -137,7 +137,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: #ffffff;
+  background-color: #f4f4f4;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -250,7 +250,7 @@ span{
   padding: 10px;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #f4f4f4;
   border: 1px solid rgb(201, 201, 201);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
@@ -307,6 +307,45 @@ span{
   font-size: 16px;
   color: #898faa;
 }
+
+.project-overview{
+  width: 100%;
+  height: 550px;
+  border: 1px solid red;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.projects-table{
+  width: 70%;
+  height: 100%;
+  border: 1px solid green;
+  padding: 10px;
+  border-radius:20px;
+}
+
+.overview{
+  width: 30%;
+  height: 100%;
+  border: 1px solid green;
+  padding: 10px;
+  border-radius:20px;
+}
+
+.projects-details{
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
 
 @media screen and (max-width : 576px) {
   .sidebar-container{
