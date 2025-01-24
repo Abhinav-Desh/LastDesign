@@ -4,11 +4,13 @@ import EqualizerIcon from '@mui/icons-material/Equalizer';
 import HouseIcon from '@mui/icons-material/House';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import Barchart1  from '../charts/Barchart1.tsx';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import LetterA from '../Assets/letter-a.png';
 import LinkedIn from '../Assets/linkedin.png';
 import Slack from '../Assets/slack.png';
 import Spotify from '../Assets/spotify.png'
 import Xdlodo from '../Assets/xd.png'
+import StepperComponent from '../MuiComponents/StepperComponent.tsx';
 
 const Dashboard = () => {
   const companyImages = {
@@ -242,7 +244,12 @@ const Dashboard = () => {
 </div>
         </div>
         <div className="overview">
-          hello
+          <div className="overview-details">
+            <div className="orders-overview">Orders overview</div>
+            <div className="orders-metric"><span><ArrowUpwardIcon sx={{color:'rgb(76, 175, 80)',fontSize:'18px',fontWeight:'700'}}/></span><span style={{fontWeight:'700',fontSize:'15px',color:'gray'}}>24%</span>  this month</div>
+          </div>
+          <StepperComponent />
+          
         </div>
       </div>
       </div>
