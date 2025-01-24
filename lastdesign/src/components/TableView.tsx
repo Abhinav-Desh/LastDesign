@@ -1,7 +1,34 @@
 import React from 'react';
+import LetterA from '../Assets/letter-a.png';
+import LinkedIn from '../Assets/linkedin.png';
+import Slack from '../Assets/slack.png';
 import Spotify from '../Assets/spotify.png';
-import { green } from '@mui/material/colors';
+import Xdlodo from '../Assets/xd.png';
+import avatar from '../Assets/avatar.png';
+import man from '../Assets/man.png';
+import people from '../Assets/people.png';
+import profile from '../Assets/profile.png';
+import user from '../Assets/user.png';
+import mother from '../Assets/mother.png';
 
+
+const imageIcons = [
+  LetterA,
+  LinkedIn,
+  Slack,
+  Spotify,
+  Xdlodo,
+  Spotify, 
+];
+
+const faceIcons = [
+  avatar,
+  man,
+  mother,
+  people,
+  profile,
+  user
+]
 const Table1 = [
   {
     Name: "John Michael",
@@ -53,6 +80,44 @@ const Table1 = [
   },
 ];
 
+const Table2=[
+  {
+    project:'Asana',
+    budget:'$2,500',
+    status:'working',
+    completion:'60%'
+  },
+  {
+    project:'Github',
+    budget:'$5,000',
+    status:'done',
+    completion:'100%'
+  },
+  {
+    project:'Atlassian',
+    budget:'$3,400',
+    status:'working',
+    completion:'60%'
+  },
+  {
+    project:'Spotify',
+    budget:'$2,500',
+    status:'cancelled',
+    completion:'60%'
+  },
+  {
+    project:'Slack',
+    budget:'$1,500',
+    status:'working',
+    completion:'60%'
+  },
+  {
+    project:'Invesion',
+    budget:'$2,300',
+    status:'cancelled',
+    completion:'60%'
+  }
+]
 const TableView = () => {
   return (
     <div className="table-container">
@@ -63,11 +128,11 @@ const TableView = () => {
             <table>
               <thead>
                 <tr className='table-main-header'>
-                  <th className='author-column' style={{ width: '30%',textAlign:'start' }}>Author</th>
-                  <th className='author-function' style={{ width: '15%',textAlign:'start' }}>Function</th>
-                  <th className='author-status' style={{ width: '15%',textAlign:'start' }}>Status</th>
-                  <th className='author-date' style={{ width: '20%',textAlign:'start' }}>Employed</th>
-                  <th className='action' style={{ width: '20%',textAlign:'start' }}>Action</th>
+                  <th className='author-column' style={{ fontSize:'14px', width: '30%',textAlign:'start',color:' rgb(123, 128, 154)' }}>AUTHOR</th>
+                  <th className='author-function' style={{ fontSize:'14px', width: '15%',textAlign:'start',color:' rgb(123, 128, 154)'}}>FUNCTION</th>
+                  <th className='author-status' style={{  fontSize:'14px',width: '15%',textAlign:'start',color:' rgb(123, 128, 154)'}}>STATUS</th>
+                  <th className='author-date' style={{  fontSize:'14px',width: '20%',textAlign:'start' ,color:' rgb(123, 128, 154)'}}>EMPLOYED</th>
+                  <th className='action' style={{ fontSize:'14px', width: '20%',textAlign:'start',color:' rgb(123, 128, 154)' }}>ACTION</th>
                 </tr>
               </thead>
               <tbody>
@@ -76,7 +141,7 @@ const TableView = () => {
                     <td className='author-main'>
                       <div className="author-container">
                         <div className='author-image'>
-                          <img src={Spotify} alt="" style={{ width: '30px', height: '30px', borderRadius: '50%' }} />
+                          <img src={faceIcons[index]} alt="" style={{ width: '30px', height: '30px', borderRadius: '50%' }} />
                         </div>
                         <div className='author-name-email'>
                           <div className='author-name'>{row.Name}</div>
@@ -115,20 +180,62 @@ const TableView = () => {
             </table>
           </div>
         </div>
-        <div className="table-2-container">
-          tabletable
-          table
-          table
-          table
-          table
-          table
-          table
-          table
-          table
-          table
-          table
-          table
-          tabletable
+        <div className="table-1-container table-2">
+          <div className="table-heading-1">Authors Table</div>
+          <div className="table-1-data">
+            <table>
+              <thead>
+                <tr className='table-main-header'>
+                <th className='author-column' style={{ fontSize:'14px',width: '20%',textAlign:'start',color:' rgb(123, 128, 154)' }}>PROJECT</th>
+                  <th className='author-function' style={{  fontSize:'14px',width: '20%',textAlign:'start',color:' rgb(123, 128, 154)'}}>BUDGET</th>
+                  <th className='author-status' style={{  fontSize:'14px',width: '20%',textAlign:'start',color:' rgb(123, 128, 154)'}}>STATUS</th>
+                  <th className='author-date' style={{  fontSize:'14px',width: '20%',textAlign:'start' ,color:' rgb(123, 128, 154)'}}>COMPLETION</th>
+                  <th className='action' style={{  fontSize:'14px',width: '20%',textAlign:'start',color:' rgb(123, 128, 154)' }}>ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Table2.map((row, index) => (
+                  <tr key={index} className='rows-head'>
+                    <td className='author-main'>
+                      <div className="author-container">
+                        <div className='author-image'>
+                          <img src={imageIcons[index]} alt="" style={{ width: '30px', height: '30px', borderRadius: '50%' }} />
+                        </div>
+                        <div className='author-name-email'>
+                          <div className='author-name'>{row.project}</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td className='author-function'>
+                      <div className='function-function'>{row.budget}</div>
+                    </td>
+                    <td className='status-check'>
+                      <span
+                        style={{
+                          color: ' rgb(123, 128, 154)',
+                          fontSize: '14px',
+                          fontWeight: '700',
+                        }}
+                        className='status-button'
+                      >
+                        {row.status}
+                      </span>
+                    </td>
+                    <td className='employed'>{row.completion}</td>
+                    <td>
+                      <button className='Edit' style={{ padding: '6px 12px'}}>
+                      <div className="details-child-2" style={{height:'18px',width:'10px'}}>
+              <div className='dot1 dot'></div>
+              <div className="dot2 dot"></div>
+              <div className="dot3 dot"></div>
+            </div>
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
