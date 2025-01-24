@@ -13,6 +13,7 @@ const MainPage = () => {
 
       {/* make navbar header */}
       <Routes>
+      <Route path="/" element={<Dashboard />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/tables" element={<TableView />} />
         <Route path="/receipt" element={<Receipt />} />
