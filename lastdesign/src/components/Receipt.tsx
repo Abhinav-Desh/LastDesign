@@ -6,11 +6,9 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import CreateIcon from '@mui/icons-material/Create';
 import visa from '../Assets/visa.png'
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 
-// March, 01, 2020
-// #MS-415646
-// $180
-//  PDF
 const data=[
 {
   date:'March, 01, 2020',
@@ -44,6 +42,27 @@ const data=[
 }
 ]
 
+const data2=[
+  {
+    name:'oliver liam',
+    company:'viking burrito',
+    email:'oliver@burrito.com',
+    vat:'FRB1235476'
+  },
+  {
+    name:'lucas harper',
+    company:'stone tech zone',
+    email:   'lucas@stone-tech.com',
+    Vat:'FRB1235476'
+  },
+  {
+    name:'ethan james',
+    company:'fiber notion',
+    email:   'ethan@fiber.com',
+    Vat:'FRB1235476'
+  }
+
+]
 
 
 const Receipt = () => {
@@ -126,10 +145,6 @@ const Receipt = () => {
             <div className='Invoices'>Invoices</div>
             <div className="viewAll" style={{cursor:'pointer'}}>VIEW ALL</div>
           </div>
-          {/* March, 01, 2020
-#MS-415646
-$180
- PDF */}
           <div className="invoice-lists">
             {data.map((element,index)=>(
             
@@ -154,6 +169,31 @@ $180
 
          
         </div>
+      </div>
+      <div className="content-2">
+        <div className="content-2-child-1">
+          <div className="content-2-child-1-heading">
+            Billing Information
+          </div>
+          
+          <div className="content-2-child-1-list">
+          {data2.map((element,index)=>(
+            <div className="content-2-child-1-childs">
+            <div className="content-2-child-1-column1">
+            <div className="column1-naming">{element.name}</div>
+            <div className="column1-delete"><DeleteIcon style={{fontSize:'20px'}}/> <span>Delete</span></div>
+            <div className="column1-edit"><EditIcon style={{fontSize:'20px'}}/><span>Edit</span></div>
+            </div>
+            <div className="column1-details">
+              <div className="company-name"><span style={{fontWeight:'300'}}>Company Name:</span>{element.company}</div>
+              <div className="email-Address"><span style={{fontWeight:'300'}}>Email Address:</span>{element.email}</div>
+              <div className="vat-number"><span style={{fontWeight:'300'}}>VAT Number:</span>{element.vat}</div>
+            </div>
+            </div>
+              ))}
+          </div>
+        </div>
+        <div className="content-2-child-2"></div>
       </div>
     </div>
   )
