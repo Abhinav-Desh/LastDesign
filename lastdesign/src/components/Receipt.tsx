@@ -182,8 +182,6 @@ const Receipt = () => {
           </div>
           <div className="invoice-lists">
             {data.map((element,index)=>(
-            
-           
             <div key={index} className="invoice-list-1">
               <div className="invoice-list-child-1">
                 <div className="invoice-date">{element.date}</div>
@@ -250,7 +248,7 @@ const Receipt = () => {
     {data3.map((ele, index) => {
         const moneyValue = parseFloat(ele.money.replace(/[^0-9.-]+/g, ''));
 
-      if (index === 2) {
+      if (index === 2){
         return (
           <>
             <div key="yesterday" className="newest-yesterday-header">
@@ -290,7 +288,7 @@ const Receipt = () => {
             <div className="newest-name">{ele.company}</div>
             <div className="newest-timing">{ele.date}</div>
           </div>
-          <div className="newest-money"style={{color:moneyValue<0?'red':'rgb(76, 175, 80)'}}>{'$'+ele.money}</div>
+          <div className="newest-money"style={{color:moneyValue<0?'red':'rgb(76, 175, 80)'}}>{index !==5  && '$'+ele.money }{index === 5 && "Pending"}</div>
         </div>
       );
     })}

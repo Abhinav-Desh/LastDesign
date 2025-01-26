@@ -21,7 +21,7 @@ const BarChart1 = () => {
         data={sampleData}
         margin={{
           top: 40,
-          right: 10,
+          right: 35,
           left: 0,
           bottom: 5,
         }}

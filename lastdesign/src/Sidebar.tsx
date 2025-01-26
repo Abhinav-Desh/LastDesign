@@ -14,7 +14,6 @@ const Sidebar = ({activeIndex,setActiveIndex}) => {
  
 
   const navlist = [
-    
     "Dashboard",
     "Tables",
     "Receipt",

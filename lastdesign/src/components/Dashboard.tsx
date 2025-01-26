@@ -87,7 +87,7 @@ const Dashboard = () => {
        <div className="three-graphs">
   <div className="graph-1 Allgraph">
     <div className="chart-image" style={{backgroundImage : "linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232))"}}>
-      <Barchart1 />
+      <Barchart1/>
     </div>
     
     {/* Statistics */}
