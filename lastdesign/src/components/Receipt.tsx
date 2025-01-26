@@ -211,7 +211,7 @@ const Receipt = () => {
           
           <div className="content-2-child-1-list">
           {data2.map((element,index)=>(
-            <div className="content-2-child-1-childs">
+            <div key={index} className="content-2-child-1-childs">
             <div className="content-2-child-1-column1">
             <div className="column1-naming">{element.name}</div>
             <div className="column1-delete"><DeleteIcon style={{fontSize:'20px'}}/> <span>Delete</span></div>
@@ -251,7 +251,7 @@ const Receipt = () => {
       if (index === 2){
         return (
           <>
-            <div key="yesterday" className="newest-yesterday-header">
+            <div  className="newest-yesterday-header">
               <div
                 style={{
                   fontSize: '14px',
@@ -265,7 +265,7 @@ const Receipt = () => {
               </div>
             </div>
 
-            <div key={index} className="newest-column1">
+            <div  className="newest-column1">
               <div className="newest-icon" style={{ border: moneyValue < 0 ? '1px solid red' : '1px solid green'}}>
               {moneyValue<0 ?<KeyboardArrowDownIcon />:<KeyboardArrowUpIcon />}
               </div>

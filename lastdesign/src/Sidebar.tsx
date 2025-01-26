@@ -10,7 +10,17 @@ import PersonIcon from "@mui/icons-material/Person";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import LogoutIcon from "@mui/icons-material/Logout";
 
-const Sidebar = ({activeIndex,setActiveIndex}) => {
+
+interface SidebarProps {
+  activeIndex: any;
+  setActiveIndex:any;
+  toggleMenu: any;
+  setToggleMenu:any;
+
+}
+
+
+const Sidebar :React.FC<SidebarProps> = ({activeIndex,setActiveIndex,toggleMenu,setToggleMenu}) => {
  
 
   const navlist = [
@@ -34,13 +44,14 @@ const Sidebar = ({activeIndex,setActiveIndex}) => {
     <ExitToAppIcon />,
     <LogoutIcon />,
   ];
-
+  
 
   const handleClick = (index: any) => {
     setActiveIndex(index);
   };
 
   return (
+    <>
     <div className="sidebar-container">
       <div className="sidebar-content">
         <div className="dashboard-heading">
@@ -65,6 +76,14 @@ const Sidebar = ({activeIndex,setActiveIndex}) => {
         </div>
       </div>
     </div>
+
+
+{/* 
+   {<div className="sidebar2-container">
+          <div className="sidebar2-content">sidebar content</div>
+    </div>
+} */}
+    </>
   );
 };
 
