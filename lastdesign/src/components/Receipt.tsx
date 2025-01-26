@@ -8,7 +8,9 @@ import visa from '../Assets/visa.png'
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-
+import DateRangeIcon from '@mui/icons-material/DateRange';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 const data=[
 {
   date:'March, 01, 2020',
@@ -62,6 +64,39 @@ const data2=[
     Vat:'FRB1235476'
   }
 
+]
+
+const data3 = [
+  {
+    company:'Netflix',
+    date:'27 March 2020, at 12:30 PM',
+    money:'-2,500'
+  },
+  {
+    company:'Apple',
+    date:'27 March 2020, at 04:30 AM',
+    money:'+2,000'
+  },
+  {
+    company:'Stripe',
+    date:'26 March 2020, at 13:45 PM',
+    money:'+750'
+  },
+  {
+    company:'HubSpot',
+    date:'26 March 2020, at 12:30 PM',
+    money:'+1,000'
+  },
+  {
+    company:'Creative Tim',
+    date:'27 March 2020, at 12:30 PM',
+    money:'+2,500'
+  },
+  {
+    company:'Webflow',
+    date:'26 March 2020, at 05:00 AM',
+    money:'Pending'
+  },
 ]
 
 
@@ -193,7 +228,75 @@ const Receipt = () => {
               ))}
           </div>
         </div>
-        <div className="content-2-child-2"></div>
+        <div className="content-2-child-2">
+  <div className="content-2-child-2-heading">
+    <div className="transaction">Your Transaction's</div>
+    <div className="transaction-date">
+      <DateRangeIcon />
+      <span style={{ paddingLeft: '10px', fontWeight: '400', fontSize: '16px' }}>
+        23 - 30 March 2020
+      </span>
+    </div>
+  </div>
+
+  <div className="newest-column">
+    <div
+      className="newest"
+      style={{ fontSize: '14px', fontWeight: '600', color: 'rgb(52, 71, 103)' }}
+    >
+      NEWEST
+    </div>
+
+    {data3.map((ele, index) => {
+        const moneyValue = parseFloat(ele.money.replace(/[^0-9.-]+/g, ''));
+
+      if (index === 2) {
+        return (
+          <>
+            <div key="yesterday" className="newest-yesterday-header">
+              <div
+                style={{
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  color: 'rgb(52, 71, 103)',
+                  marginTop: '20px',
+                  marginBottom: '10px',
+                }}
+              >
+                YESTERDAY
+              </div>
+            </div>
+
+            <div key={index} className="newest-column1">
+              <div className="newest-icon" style={{ border: moneyValue < 0 ? '1px solid red' : '1px solid green'}}>
+              {moneyValue<0 ?<KeyboardArrowDownIcon />:<KeyboardArrowUpIcon />}
+              </div>
+              <div className="newest-data">
+                <div className="newest-name">{ele.company}</div>
+                <div className="newest-timing">{ele.date}</div>
+              </div>
+              <div className="newest-money" style={{color:moneyValue<0?'red':'rgb(76, 175, 80)'}}>{'$'+ele.money}</div>
+            </div>
+          </>
+        );
+      }
+      
+      return (
+        <div key={index} className="newest-column1">
+          <div className="newest-icon" style={{ border: moneyValue < 0 ? '1px solid red' : '1px solid rgb(76, 175, 80)',}}>
+            {moneyValue<0 ?<KeyboardArrowDownIcon />:<KeyboardArrowUpIcon />}
+          </div>
+          <div className="newest-data">
+            <div className="newest-name">{ele.company}</div>
+            <div className="newest-timing">{ele.date}</div>
+          </div>
+          <div className="newest-money"style={{color:moneyValue<0?'red':'rgb(76, 175, 80)'}}>{'$'+ele.money}</div>
+        </div>
+      );
+    })}
+  </div>
+</div>
+
       </div>
     </div>
   )

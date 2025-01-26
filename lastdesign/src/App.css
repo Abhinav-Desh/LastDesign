@@ -870,6 +870,9 @@ table{
   font-weight: 700;
 }
 
+.invoice-lists{
+  padding: 15px;
+}
 .viewAll{
   font-size: 12px;
   border: 1px solid rgb(33, 114, 255);
@@ -936,14 +939,7 @@ table{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.content-2-child-2{
-  border: 1px solid red;
-  border-radius: 10px;
-  height: 100%;
-  width: 40%;
-  background-color: white;
-  padding: 20px;
-}
+
 
 .content-2-child-1-heading{
   font-size: 18px;
@@ -966,7 +962,7 @@ table{
   height: 160px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   background-color: #fbfbfb;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -1015,6 +1011,88 @@ table{
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.content-2-child-2{
+  border: 1px solid red;
+  border-radius: 10px;
+  height: 100%;
+  width: 40%;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-2-child-2-heading{
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: rgb(52, 71, 103);
+  font-weight: 700;
+}
+
+.transaction-date{
+  display: flex;
+  align-items: center;
+  color: rgb(123, 128, 154);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.newest-column{
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  padding: 20px;
+  gap: 20px;
+}
+
+.newest-column1{
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.newest-icon{
+  border-radius: 50%;
+  height: 100%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+.newest-data{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.newest-timing{
+  font-size: 12px;
+  color: rgb(123, 128, 154);
+  font-weight: 400;
+}
+
+.newest-name{
+  font-size: 15px;
+  color: rgb(52, 71, 103);
+  font-weight: 700;
+}
+
+.newest-money{
+  font-size: 14px;
+  font-weight: 700;
 }
 @media screen and (max-width : 576px) {
   .sidebar-container{
