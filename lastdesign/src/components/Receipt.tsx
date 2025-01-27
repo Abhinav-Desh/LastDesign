@@ -49,7 +49,7 @@ const data2=[
     name:'oliver liam',
     company:'viking burrito',
     email:'oliver@burrito.com',
-    vat:'FRB1235476'
+    Vat:'FRB1235476'
   },
   {
     name:'lucas harper',
@@ -135,19 +135,19 @@ const Receipt = () => {
           </div>
         <div className="salary-details">
           <div className='salary-name' style={{fontSize:'18px'}}>Salary</div>
-          <div className="salary-name-detail" style={{fontSize:'13px',fontWeight:'500', color: 'rgb(147, 164, 194)'}}>Belong Interactive</div>
+          <div className="salary-name-detail" style={{fontSize:'13px',fontWeight:'400', color: 'rgb(147, 164, 194)'}}>Belong Interactive</div>
         </div>
-      <div className="salary-money" style={{fontSize:'22px',fontWeight:'600',textAlign:'center',paddingBottom:'20px'}}>+$2000</div>
+      <div className="salary-money" style={{fontSize:'20px',fontWeight:'700',textAlign:'center',marginBottom:'20px'}}>+$2000</div>
         </div>
         <div className="paypal">
           <div className='paypal-photo'><img src={Paypal}  className='paypal-icon' style={{filter: 'invert(100%)'}}/></div>
           <div className="paypal-details">
             <div className="paypal-name"  style={{fontSize:'18px'}}>PayPal</div>
-            <div className="paypal-name-1" style={{fontSize:'13px',fontWeight:'500',  color: 'rgb(147, 164, 194)'}}>Freelance</div>
-            <div className="paypal-name-2" style={{fontSize:'13px',fontWeight:'500', color: 'rgb(147, 164, 194)'}}>Payment</div>
+            <div className="paypal-name-1" style={{fontSize:'13px',fontWeight:'400',  color: 'rgb(147, 164, 194)'}}>Freelance Payment</div>
+            
           </div>
 
-          <div className="paypal-money" style={{fontSize:'22px',fontWeight:'600',textAlign:'center',marginTop:'20px',paddingBottom:'10x'}}>$455.55</div>
+          <div className="paypal-money" style={{fontSize:'20px',fontWeight:'700',textAlign:'center',marginBottom:'20px'}}>$455.55</div>
           
         </div>
       </div>
@@ -159,16 +159,16 @@ const Receipt = () => {
         <div className="child-02-pin">
           <div className='pin-1'>
             <img src={cardIcon} height={'15px'} width={'25px'}  />
-            <div className="pin-1-number" style={{fontWeight:'600',fontSize:'20px'}}>****  ****  ****  7852</div>
+            <div className="pin-1-number" style={{fontWeight:'600',fontSize:'16px'}}>****  ****  ****  7852</div>
             <div className="editpen">
-              <CreateIcon style={{fontSize:'25px'}}/>
+              <CreateIcon style={{fontSize:'20px'}}/>
             </div>
           </div>
           <div className="pin-2">
           <img src={visa} height={'25px'} width={'30px'}  />
-            <div className="pin-2-number" style={{fontWeight:'600',fontSize:'20px'}}>****  ****  ****  7852</div>
+            <div className="pin-2-number" style={{fontWeight:'600',fontSize:'16px'}}>****  ****  ****  7852</div>
             <div className="editpen">
-              <CreateIcon style={{fontSize:'25px'}}/>
+              <CreateIcon style={{fontSize:'20px'}}/>
             </div>
           </div>
         </div>
@@ -220,7 +220,7 @@ const Receipt = () => {
             <div className="column1-details">
               <div className="company-name"><span style={{fontWeight:'300'}}>Company Name:</span>{element.company}</div>
               <div className="email-Address"><span style={{fontWeight:'300'}}>Email Address:</span>{element.email}</div>
-              <div className="vat-number"><span style={{fontWeight:'300'}}>VAT Number:</span>{element.vat}</div>
+              <div className="vat-number"><span style={{fontWeight:'300'}}>VAT Number:</span>{element.Vat}</div>
             </div>
             </div>
               ))}
@@ -246,8 +246,8 @@ const Receipt = () => {
     </div>
 
     {data3.map((ele, index) => {
-        const moneyValue = parseFloat(ele.money.replace(/[^0-9.-]+/g, ''));
-
+      // i use chatgpt for this moneyvalue finding 
+        const moneyValue = parseFloat(ele.money.replace(/[^0-9.-]+/g, '')); 
       if (index === 2){
         return (
           <>

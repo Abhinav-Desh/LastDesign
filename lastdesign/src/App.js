@@ -10,7 +10,7 @@ function App() {
     // console.log(togglemenu)
   return (
     <div className="App">
-      <Sidebar activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+      <Sidebar activeIndex={activeIndex} setActiveIndex={setActiveIndex} togglemenu={togglemenu} setToggleMenu={setToggleMenu}/>
       <MainPage activeIndex={activeIndex} setActiveIndex={setActiveIndex} togglemenu={togglemenu} setToggleMenu={setToggleMenu} />
     </div>
   );

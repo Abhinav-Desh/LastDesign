@@ -14,7 +14,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 21vw;
+  width: 19vw;
   height: 100vh;
   padding: 10px ;
   background:'#eeeeee';
@@ -66,23 +66,27 @@
 .nav-options{
   margin-top: 15px;
   width: 100%;
-  height: 400px;
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
 }
 
 .nav{
   display: flex;
   width: 100%;
-  height: 60px;
+  height: 50px;
   align-items: center;
   gap: 15px;
   justify-content: flex-start;
   padding-left: 20px;
   padding-right: 20px;
   color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -94,7 +98,7 @@
 }
 
 .nav .text{
-  font-size: 18px;
+  font-size: 14px;
   text-decoration: none;
 }
 
@@ -107,7 +111,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 21vw;
+  width: 19vw;
   height: 100vh;
   padding: 10px ;
   background:'#eeeeee'; 
@@ -115,9 +119,9 @@
 .main-page {
   position: absolute;
   right: 0;
-  width: 79vw;
+  width: 81vw;
   height: 100vh;
-  padding: 30px;
+  padding: 0 30px 30px 30px;
   overflow: auto;
 }
 
@@ -615,8 +619,8 @@ table{
 
 .content-1{
   display: flex;
-  align-items: center;
-  height: 500px;
+  align-items: flex-start;
+  height: 420px;
   width: 100%;
   border-radius: 10px;
   gap: 20px;
@@ -635,15 +639,15 @@ table{
 
 .content-1-child1-01{
   width: 100%;
-  height: 65%;
+  height: 50%;
   border-radius: 10px;
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
 .debitcard{
   width: 50%;
-  height: 85%;
+  height: 100%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -691,7 +695,7 @@ table{
 
 .salary{
   width: 25%;
-  height: 85%;
+  height: 100%;
   border-radius: 10px;
   background-color:  #ffffff;
   display: flex;
@@ -704,8 +708,8 @@ table{
 
 
 .salary-photo{
-  width: 70px;
-  height: 80px;
+  width: 60px;
+  height: 70px;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -713,13 +717,12 @@ table{
   background: linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232));
   margin-top: 20px;
   color: #fff;
-  margin-bottom: 20px;
 }
 
 .salary-details{
   width: 120px;
   height: 80px;
-  border-bottom: 1px solid rgb(216, 215, 215);
+  border-bottom: 1px solid rgb(222, 226, 230);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -732,7 +735,7 @@ table{
 
 .paypal{
   width: 25%;
-  height: 95%;
+  height: 100%;
   border-radius: 10px;
   background-color:  #ffffff;
   display: flex;
@@ -744,8 +747,8 @@ table{
 }
 
 .paypal-photo{
-  width: 70px;
-  height: 80px;
+  width: 60px;
+  height: 70px;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -753,7 +756,6 @@ table{
   background: linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232));
   margin-top: 20px;
   color: #fff;
-  margin-bottom: 20px;
 }
 
 .paypal-icon{
@@ -763,13 +765,13 @@ table{
 }
 
 .paypal-details{
-  width: 100px;
-  height: 100px;
-  border-bottom: 1px solid rgb(216, 215, 215);
+  width: 120px;
+  height: 80px;
+  border-bottom: 1px solid rgb(222, 226, 230);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 10px;
+  margin-bottom: 25px;
   font-weight: 700;
   color: rgb(52, 71, 103);
   text-align: center;
@@ -778,7 +780,7 @@ table{
 
 .content-1-child1-02{
   width: 100%;
-  height: 35%;
+  height: 50%;
   border-radius: 10px;
   padding: 15px;
   background-color: white;
@@ -826,7 +828,7 @@ table{
 .pin-1{
   width: 50%;
   height: 80px;
-  border: 1px solid rgb(52, 71, 103);
+  border: 1px solid rgb(222, 226, 230);
   border-radius: 10px;
   display: flex;
   gap: 10px;
@@ -838,7 +840,7 @@ table{
 .pin-2{
   width: 50%;
   height: 80px;
-  border: 1px solid rgb(52, 71, 103);
+  border: 1px solid rgb(222, 226, 230);
   border-radius: 10px;
   display: flex;
   gap: 10px;
@@ -872,15 +874,19 @@ table{
   padding: 10px;
 }
 
+
 .Invoices{
   color: rgb(52, 71, 103);
   font-size: 18px;
   font-weight: 700;
 }
 
+
 .invoice-lists{
-  padding: 15px;
+  padding: 10px;
 }
+
+
 .viewAll{
   font-size: 12px;
   border: 1px solid rgb(33, 114, 255);
@@ -896,11 +902,11 @@ table{
 
 
 .invoice-list-1{
-  height: 70px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 10px;
 
 }
 .invoice-list-child-1{
@@ -1144,13 +1150,13 @@ table{
 
 .navbar{
   position: sticky;
-  top: 20px;
+  top: 0;
   left: 0;
   width: 100%;
-  border: 1px solid red;
+  border: 1px solid #e2e1e1;
   height: 80px;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 1100;
   background-color: #f4f4f4;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
