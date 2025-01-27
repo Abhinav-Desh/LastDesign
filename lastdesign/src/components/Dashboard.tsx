@@ -97,17 +97,16 @@ const Dashboard = () => {
       </div>
       <div className='stats'>Last Campaign Performance</div>
     </div>
-    
-    {/* Last Updated */}
+  
+  
     <div className='updation'>
       Campaign sent 2 days ago
     </div>
   </div>
   
-  {/* Graph 2 */}
+  
   <div className="graph-2 Allgraph">
     <div className="chart-image" style={{backgroundImage : " linear-gradient(195deg, rgb(102, 187, 106), rgb(67, 160, 71))"}}>
-      {/* Replace with your actual chart component */}
       <Barchart1 />
     </div>
     <div className='statistics'>
@@ -117,20 +116,20 @@ const Dashboard = () => {
       <div className='stats'> <span style={{fontWeight:'600',color:' #808d96'}}>(+15%)</span> increase in today sales</div>
     </div>
     
-    {/* Last Updated */}
     <div className='updation'>
     updated 4 min ago
     </div>
   </div>
   
-  {/* Graph 3 */}
+
+
   <div className="graph-3 Allgraph">
    
     <div className="chart-image " style={{backgroundImage : " linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))"}}>
       <Barchart1 />
     </div>
    
-    {/* Statistics */}
+
     <div className='statistics'>
       <div className="work-name">
       Completed Tasks
@@ -138,7 +137,8 @@ const Dashboard = () => {
       <div className='stats'>Last Campaign Performance</div>
     </div>
     
-    {/* Last Updated */}
+   
+   
     <div className='updation'>
       Just Updated
     </div>

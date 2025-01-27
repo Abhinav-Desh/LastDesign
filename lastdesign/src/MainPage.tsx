@@ -17,12 +17,12 @@ interface MainPageProps {
 
 const MainPage: React.FC<MainPageProps> = ({ activeIndex, setActiveIndex, toggleMenu, setToggleMenu }) => {
   const [scrollheight,setScrollHeight] = useState(0);
-  const scrollfunction = (e:any) =>{
-    // setScrollHeight(window.scrollY+1)
-    console.log(e)
-  }
+  // const scrollfunction = (e:any) =>{
+  //   // setScrollHeight(window.scrollY+1)
+  //   console.log(e)
+  // }
   return (
-    <div className="main-page" style={{ backgroundColor: '#eeeeee' }} onScroll={(e)=>{scrollfunction(e)}}>
+    <div className="main-page" style={{ backgroundColor: '#eeeeee' }}>
      
       <Navbar activeIndex={activeIndex} setActiveIndex={setActiveIndex} toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
 

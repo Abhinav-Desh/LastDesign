@@ -1205,7 +1205,6 @@ table{
   gap: 10px;
   margin-right: 10px;
   color: #676565;
-
 }
 
 .search-bar{
@@ -1219,6 +1218,7 @@ table{
 .menu-icon{
   display: none;
 }
+
 @media screen and (max-width:1012px){
   .sidebar-container{
     display: none;
@@ -1234,18 +1234,16 @@ table{
 
 }
 
-@media screen and (max-width:870px){
+@media screen and (max-width:991px){
   .four-cards{
     display: flex;
     flex-direction: column;
     gap: 40px;
   }
 
-
   .card4{
     width: 100%;
   }
-
 
   .three-graphs{
     display: flex;
@@ -1272,7 +1270,7 @@ table{
     width: 100%;
   }
 }
-@media screen and (max-width : 586px) {
+@media screen and (max-width : 576px) {
   .sidebar-container{
     display: none;
   }
