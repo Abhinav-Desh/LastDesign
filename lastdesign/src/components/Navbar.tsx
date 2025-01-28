@@ -1,36 +1,50 @@
-import React, { useDebugValue, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-// import logo from "../Assets/logo-white.svg";
-import SettingsIcon from "@mui/icons-material/Settings";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import SettingsIcon from "@mui/icons-material/Settings";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import HomeIcon from "@mui/icons-material/Home";
 
 interface NavbarProps {
   activeIndex: any;
   setActiveIndex: any;
-  toggleMenu: Boolean;
+  toggleMenu: any;
   setToggleMenu: any;
 }
 
-const Navbar: React.FC<NavbarProps> = ({
-  activeIndex,
-  setActiveIndex,
-  toggleMenu,
-  setToggleMenu,
-}) => {
+const Navbar: React.FC<NavbarProps> = ({ activeIndex, setActiveIndex, toggleMenu, setToggleMenu }) => {
   const location = useLocation();
   const currentPath = location.pathname.split("/")[1];
 
+  // State to hold the current window width
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  
+  // Effect to handle window resize and update windowWidth state
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Add event listener for resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const handleToggle = () => {
-    setToggleMenu((prevState)=>!prevState);
-    console.log('===>',toggleMenu);
+    setToggleMenu(!toggleMenu); 
   };
 
+  useEffect(()=>{
+    if(windowWidth > 1012){
+      setToggleMenu(false)
+    }
+  },[windowWidth])
+  console.log(windowWidth)
   return (
     <div className="navbar">
       <div className="navbar-content">
@@ -46,7 +60,7 @@ const Navbar: React.FC<NavbarProps> = ({
             <AccountCircleIcon />
           </div>
           <div className="menu-icon" onClick={handleToggle}>
-            {toggleMenu===false ? <MenuIcon /> : <MenuOpenIcon />}
+            {toggleMenu ? <MenuOpenIcon /> : <MenuIcon />}
           </div>
           <div className="settings">
             <SettingsIcon />
